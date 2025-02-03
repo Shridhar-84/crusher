@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stone Maker Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Top Bar -->
     <div class="top-bar">
-        <div class="container">
-            <a href="tel:1111111111" class="contact-info">📞 1111111111</a>
-            <a href="mailto:sample@example.com" class="contact-info">📧 sample@example.com</a>
-            <span class="location">📍 Konvihonnapur Road</span>
-        </div>
+      <div class="container">
+        <a href="tel:1111111111" class="contact-info">📞 9485632578</a>
+        <a href="mailto:sample@example.com" class="contact-info"
+          >📧 techsupport@gmail.com</a
+        >
+        <span class="location">📍 Konvihonnapur Road</span>
+      </div>
     </div>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">SC</div>
-            <ul class="nav-links">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">TESTIMONIALS</a></li>
-                <li><a href="#">CONTACT US</a></li>
-            </ul>
+      <div class="container">
+        <div class="logo">
+          <img src="./bgimages/logo.png" alt="Company Logo" />
         </div>
+        <ul class="nav-links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">TESTIMONIALS</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>The Best Stone Crushing and Casting Services</h1>
-            <button class="enquire-btn">Enquire Now</button>
-        </div>
+      <div class="hero-content">
+        <h1>The Best Stone Crushing and Casting Services</h1>
+        <button class="enquire-btn">Enquire Now</button>
+      </div>
     </header>
-</body>
+
+    <!-- WhatsApp Icon (at the bottom right corner) -->
+    <section>
+        <a href="https://wa.me/1234567890" target="_blank" id="whatsapp-icon">
+            <img src="./bgimages/whatsapplogo.png" alt="WhatsApp" />
+        </a>
+    </section>
+        <!-- Footer -->
+        <footer class="footer" style="background-color: #222; color: #fff; padding: 20px 0; text-align: center;">
+            <div class="container">
+                <!-- Footer Navigation Section -->
+                <div class="footer-nav" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                 
+                    <ul class="nav-links">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">TESTIMONIALS</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Copyright Information -->
+                <p style="margin-top: 20px;">&copy; 2025 StoneCraft. All rights reserved.</p>
+            </div>
+        </footer>
+  </body>
 </html>
