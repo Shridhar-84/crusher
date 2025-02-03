@@ -1,63 +1,165 @@
-body {
+:root {
+    --primary: #004aad;        /* RGB(0, 74, 173) */
+    --background: #ffffff;
+    --foreground: #ffffff; /* Updated to white for better visibility */
+    --card: transparent; /* Made transparent */
+    --muted-foreground: #d1d5db;
+    --border: #e2e8f0;
+    --radius: 0.5rem;
+}
+
+/* Basic Reset */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+/* Container Setup */
 .container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 0 2rem;
+    max-width: 1400px;
 }
 
+/* Top Bar */
 .top-bar {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    background: transparent;
+    border: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    padding: 0.75rem 0;
 }
 
-.contact-info, .location {
-    margin: 0 15px;
+.top-bar .container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
+.contact-info,
+.location {
+    color: var(--muted-foreground);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Navigation */
 .navbar {
+    position: absolute;
+    top: 50px; /* Adjusted position */
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    z-index: 10;
+}
+
+.navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    background: #333;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
     color: white;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
+    gap: 2rem;
+    list-style: none;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
+.nav-links a:hover {
+    color: #ffd700; /* Gold color hover effect */
+}
+
+/* Hero Section */
 .hero {
-    height: 300px;
-    background: url('./bgimages/crusherImage.png') center/cover no-repeat;
+    position: relative;
+    height: 600px; /* Increased to cover navbar */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('./bgimages/crusherImage.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* Align content to the left */
+    padding-left: 5%;  /* Adjust as needed */
+}
+
+.hero-content {
+    text-align: left;  /* Align text to the left */
+    max-width: 600px;  /* Limit width for better readability */
+    padding: 0;
+    margin: 0;
 }
 
 
+/* Button Styles */
 .enquire-btn {
-    background: red;
+    background-color: var(--primary);
     color: white;
-    padding: 10px 20px;
+    padding: 0.75rem 2rem;
     border: none;
+    border-radius: calc(var(--radius) - 2px);
+    font-weight: 600;
     cursor: pointer;
+    transition: opacity 0.2s;
 }
+
+.enquire-btn:hover {
+    opacity: 0.9;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        display: none; /* Consider adding mobile menu toggle */
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto; /* Maintains aspect ratio */
+    border-radius: 50%;
+}
+
